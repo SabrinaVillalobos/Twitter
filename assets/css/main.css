@@ -1,6 +1,5 @@
 body {
 	margin: 0 auto;
-	background-color: #FAFAFA;
 	font-family: Roboto;
 	background-image: url("../img/wallpaper-2388706.jpg");
     background-repeat: no-repeat;
@@ -21,16 +20,40 @@ h1 {
 	margin: 0;
 	line-height:46px;
 }
-div.box1left {
-	top:30%;
+h2 {
+	padding-top:30px;
+}
+h2, p{
+	margin-top: 13px;
+	padding-left: 30px;
+}
+div.boxleft {
+	margin-left: 5%;
 	width:43%;
 	height: 320px;
 	background-color: #fff;
-	
+	margin-top: 10px;
+	float:left;
 
+ 
 }
 a {
 	text-decoration: none;
 	font-weight: 500;
 	font-size: 14px;
+	color: #1DA1F2;
+	display: block;
+	padding-left: 30px;
+	padding-top: 3.8%;
+}
+hr {
+	top:100px;
+	margin-top: 130px;
+}
+div.boxright {
+	margin-top: 10px;
+	margin-left: 49%;
+	width:43%;
+	height: 320px;
+	background-color: #fff;
 }
