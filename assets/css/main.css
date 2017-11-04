@@ -1,0 +1,36 @@
+body {
+	margin: 0 auto;
+	background-color: #FAFAFA;
+	font-family: Roboto;
+	background-image: url("../img/wallpaper-2388706.jpg");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: fixed;
+    background-size: cover;
+}
+header {
+	width: 100%;
+	height: 46px;
+	background-color: #1DA1F2;
+	color:#fff;
+}
+h1 {
+	font-size: 20px;
+	letter-spacing: 1px;
+	text-align: center;
+	margin: 0;
+	line-height:46px;
+}
+div.box1left {
+	top:30%;
+	width:43%;
+	height: 320px;
+	background-color: #fff;
+	
+
+}
+a {
+	text-decoration: none;
+	font-weight: 500;
+	font-size: 14px;
+}
