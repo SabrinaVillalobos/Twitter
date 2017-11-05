@@ -6,6 +6,7 @@ body {
     background-position: center center;
     background-attachment: fixed;
     background-size: cover;
+    overflow:hidden;
 }
 header {
 	width: 100%;
@@ -22,12 +23,17 @@ h1 {
 }
 h2 {
 	padding-top:30px;
-}
-h2, p{
 	margin-top: 13px;
 	padding-left: 30px;
+	font-weight: 400;
 }
-div.boxleft {
+h3{
+	margin-top: 13px;
+	padding-left: 30px;
+	font-weight: 300;
+	padding-bottom: 94px;
+}
+div.boxleft {/*no darle altura para que crezca con el text area*/
 	margin-left: 5%;
 	width:43%;
 	height: 320px;
@@ -44,16 +50,85 @@ a {
 	color: #1DA1F2;
 	display: block;
 	padding-left: 30px;
-	padding-top: 3.8%;
+	padding-top: 4%;
+	font-weight: 600;
 }
 hr {
-	top:100px;
-	margin-top: 130px;
+	margin:20px;
+	margin-bottom:10px;
+	background-color: #eee;
+    border: 0 none;
+    color: #eee;
+    height: 5px;
 }
-div.boxright {
+form {
 	margin-top: 10px;
 	margin-left: 49%;
 	width:43%;
-	height: 320px;
 	background-color: #fff;
+	overflow: hidden;
+}
+
+textarea {
+	border-radius: 1em;
+	border: none;
+	width: 70%;
+	margin: 0 auto;
+	padding-top:20px;
+	padding-left: 20px;
+	font-family: Roboto;
+	outline: none;
+	resize: none;
+}
+
+#btn {
+	background-color: #1DA1F2;
+	color:#fff;
+	border:0;
+	border-radius:2px;
+	height: 30px;
+	width: 80px;
+	font-weight: bold;
+	margin:20px;
+}
+.buthr {
+	margin:20px;
+	margin-bottom:10px;
+	background-color: #eee;
+    border: 0 none;
+    color: #eee;
+    height: 5px;
+    margin-top:180px;
+}
+
+#cont div {
+	margin-bottom:20px;
+	background-color: #FFF;
+	padding-bottom: 2px;
+	margin:15px;
+	border-radius:3px;*/
+
+}
+
+#cont {
+	padding-top:80px;
+    border-radius:3px;
+	width: 80%;
+	margin: 0 auto;
+	color: #4E4D53;
+	text-align: left;
+	padding-bottom: 0;
+}
+
+p {
+ text-align: left;
+ vertical-align: middle;
+
+}
+span#counter {
+	float:right;
+	text-align: right;
+	padding: 30px;
+	color: #1DA1F2;
+	font-weight: 600;
 }
