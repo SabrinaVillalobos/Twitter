@@ -1,30 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-	<meta charset="UTF-8">
-	<title>Twitter</title>
-	<link rel="stylesheet" href="assets/css/main.css">
-	<link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900" rel="stylesheet">
-</head>
-<body>
-	<header>
-		<h1>Twitter</h1>
-	</header>
-	<div class= "boxleft">
-		<h2>Reto de Código</h2>
-		<h3>Réplica de newsfeed de Twitter</h3><hr>
-		<a href="https://github.com/SabrinaVillalobos/Twitter/blob/master/assets/js/app.js">CÓDIGO</a>
-	</div>
-	<div class= "boxright">
-		<form>
-		<textarea onkeydown="textAreaGrow(this)" class="txt" id="comment" onkeyup="charCounter(this)" placeholder="¿Qué estás pensando?"  rows="1" cols="60"></textarea>
-		<hr class="buthr">
-			<button type="button" id="btn" onclick="textArea()"="">Tweet</button><span id="counter">140</span>
-		</form>
-	</div>
-	<div id="cont"></div>
-		</div>
-
-	<script type="text/javascript" src="assets/js/app.js"></script>
-</body>
+   <head>
+      <meta charset="UTF-8">
+      <title>Twitter</title>
+      <link rel="stylesheet" href="assets/css/main.css">
+      <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900" rel="stylesheet">
+   </head>
+   <body>
+      <header>
+         <h1>Twitter</h1>
+      </header>
+      <div class= "boxleft">
+         <h2>Reto de Código</h2>
+         <h3>Réplica de newsfeed de Twitter</h3>
+         <hr>
+         <a href="https://github.com/SabrinaVillalobos/Twitter/blob/master/assets/js/app.js">CÓDIGO</a>
+      </div>
+      <div class= "boxright">
+         <form>
+            <textarea onkeydown="textAreaGrow(this)" class="txt" id="comment" onkeyup="charCounter(this)" oninput="disableBtn(this);" placeholder="¿Qué estás pensando?"  rows="1" cols="60"></textarea>
+            <hr class="buthr">
+            <button type="button" id="btn"  onclick="textArea()"="">Tweet</button><span id="counter">140</span>
+         </form>
+      </div>
+      <div id="cont"></div>
+      <script type="text/javascript" src="assets/js/app.js"></script>
+   </body>
 </html>

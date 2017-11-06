@@ -107,7 +107,7 @@ textarea {
 	background-color: #FFF;
 	padding-bottom: 2px;
 	margin:15px;
-	border-radius:3px;*/
+	border-radius:3px;
 
 }
 
@@ -119,6 +119,7 @@ textarea {
 	color: #4E4D53;
 	text-align: left;
 	padding-bottom: 0;
+	word-break : break-all; /*para evitar que una palabra larga se salga del div*/
 }
 
 p {

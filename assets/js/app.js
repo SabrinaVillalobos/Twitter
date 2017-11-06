@@ -42,18 +42,29 @@ function charCounter (element) { //contador de caracteres
     else if(characters >=140){
     	counter.style.color= "red";
     }
+    else if (characters === ""){
+    	counter = 140; //se resetea
+    }
     else{ 
     	counter.style.color="#1DA1F2";
     }
   document.getElementById("counter").innerHTML = remain;
+
 }
-/*
+
 function disableBtn (){
-	if (comment.value.length >= 141){
+
+	if (document.getElementById('comment').value.length >= 141){
 		document.getElementById("btn").disabled = true;
 	}
-	else if (comment.value.length <= 140){
+	else if (document.getElementById('comment').value.length <= 140){
 		document.getElementById("btn").disabled = false;
 	}
 
-}*/
+}
+
+function hour() {
+    var d = new Date();
+    var n = d.toLocaleTimeString();
+    document.getElementById("comments").innerHTML = n;
+}
