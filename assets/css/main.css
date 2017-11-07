@@ -1,138 +1,131 @@
 body {
-	margin: 0 auto;
-	font-family: Roboto;
-	background-image: url("../img/wallpaper-2388706.jpg");
+    margin: 0 auto;
+    font-family: Roboto;
+    background-image: url("../img/wallpaper-2388706.jpg");
     background-repeat: no-repeat;
     background-position: center center;
     background-attachment: fixed;
     background-size: cover;
-
 }
 header {
-	width: 100%;
-	height: 46px;
-	background-color: #1DA1F2;
-	color:#fff;
+    width: 100%;
+    height: 46px;
+    background-color: #1DA1F2;
+    color: #fff;
 }
 h1 {
-	font-size: 20px;
-	letter-spacing: 1px;
-	text-align: center;
-	margin: 0;
-	line-height:46px;
+    font-size: 20px;
+    letter-spacing: 1px;
+    text-align: center;
+    margin: 0;
+    line-height: 46px;
 }
 h2 {
-	padding-top:30px;
-	margin-top: 13px;
-	padding-left: 30px;
-	font-weight: 400;
+    padding-top: 30px;
+    margin-top: 13px;
+    padding-left: 30px;
+    font-weight: 400;
 }
-h3{
-	margin-top: 13px;
-	padding-left: 30px;
-	font-weight: 300;
-	padding-bottom: 94px;
+h3 {
+    margin-top: 13px;
+    padding-left: 30px;
+    font-weight: 300;
+    padding-bottom: 94px;
 }
-div.boxleft {/*no darle altura para que crezca con el text area*/
-	margin-left: 5%;
-	width:43%;
-	height: 320px;
-	background-color: #fff;
-	margin-top: 10px;
-	float:left;
-
- 
+div.boxleft { /*no darle altura para que crezca con el text area*/
+    
+    margin-left: 5%;
+    width: 43%;
+    height: 320px;
+    background-color: #fff;
+    margin-top: 10px;
+    float: left;
 }
 a {
-	text-decoration: none;
-	font-weight: 500;
-	font-size: 14px;
-	color: #1DA1F2;
-	display: block;
-	padding-left: 30px;
-	padding-top: 4%;
-	font-weight: 600;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 14px;
+    color: #1DA1F2;
+    display: block;
+    padding-left: 30px;
+    padding-top: 4%;
+    font-weight: 600;
 }
 hr {
-	margin:20px;
-	margin-bottom:10px;
-	background-color: #eee;
+    margin: 20px;
+    margin-bottom: 10px;
+    background-color: #eee;
     border: 0 none;
     color: #eee;
     height: 5px;
 }
 form {
-	margin-top: 10px;
-	margin-left: 49%;
-	width:43%;
-	background-color: #fff;
-	overflow: hidden;
+    margin-top: 10px;
+    margin-left: 49%;
+    width: 43%;
+    background-color: #fff;
+    overflow: hidden;
 }
-
 textarea {
-	border-radius: 1em;
-	border: none;
-	width: 70%;
-	margin: 0 auto;
-	padding-top:20px;
-	padding-left: 20px;
-	font-family: Roboto;
-	outline: none;
-	resize: none;
-	overflow-y: hidden;
+    border-radius: 1em;
+    border: none;
+    width: 70%;
+    margin: 0 auto;
+    padding-top: 20px;
+    padding-left: 20px;
+    font-family: Roboto;
+    outline: none;
+    resize: none;
+    overflow-y: hidden;
 }
-
 #btn {
-	background-color: #1DA1F2;
-	color:#fff;
-	border:0;
-	border-radius:2px;
-	height: 30px;
-	width: 80px;
-	font-weight: bold;
-	margin:20px;
+    background-color: #1DA1F2;
+    color: #fff;
+    border: 0;
+    border-radius: 2px;
+    height: 30px;
+    width: 80px;
+    font-weight: bold;
+    margin: 20px;
 }
 .buthr {
-	margin:20px;
-	margin-bottom:10px;
-	background-color: #eee;
+    margin: 20px;
+    margin-bottom: 10px;
+    background-color: #eee;
     border: 0 none;
     color: #eee;
     height: 5px;
-    margin-top:180px;
+    margin-top: 180px;
 }
-
 #cont div {
-	margin-bottom:20px;
-	background-color: #FFF;
-	padding-bottom: 2px;
-	margin:15px;
-	border-radius:3px;
-
+    display: inline-block;
+    margin-bottom: 20px;
+    background-color: #FFF;
+    padding-bottom: 2px;
+    margin: 15px;
+    border-radius: 3px;
+    width: 90%;
 }
-
 #cont {
-	padding-top:80px;
-    border-radius:3px;
-	width: 80%;
-	margin: 0 auto;
-	color: #4E4D53;
-	text-align: left;
-	padding-bottom: 0;
-	word-break : break-all; /*para evitar que una palabra larga se salga del div*/
+    padding-top: 80px;
+    border-radius: 3px;
+    width: 80%;
+    margin: 0 auto;
+    color: #4E4D53;
+    text-align: left;
+    padding-bottom: 0;
+    word-break: break-all; /*para evitar que una palabra larga se salga del div*/
 }
-
 p {
- text-align: left;
- vertical-align: middle;
- display: inline-block;
- padding-left: 15px;
-
+    text-align: left;
+    vertical-align: middle;
+    display: inline-block;
+    padding-left: 15px;
 }
 span#counter {
-	float:right;
-	text-align: right;
-	padding: 30px;
-	color: #1DA1F2;
-	font-weight: 600;
+    float: right;
+    text-align: right;
+    padding: 30px;
+    color: #1DA1F2;
+    font-weight: 600;
 }

@@ -1,70 +1,81 @@
-function textArea(){
-	//tenemos que tomar el texto ingresado en el textarea
-	var comments = document.getElementById('comment').value;
+document.getElementById("btn").addEventListener("click", textArea);
 
-	//limpiar el textarea
-	document.getElementById('comment').value = '';
+function textArea() {
 
-	//contenedor que esta en el html
-	var cont = document.getElementById('cont');
+    var d = new Date(); //agregar hora antes del comentario
+    var n = d.toLocaleTimeString();
+    document.getElementById("comment").innerHTML = n;
 
-	//creamos el div que contiene cada comentario
-	var newComments = document.createElement('div');
+    //guardar texto ingresado en una variable
+    var comments = document.getElementById('comment').value;
 
-	//validar que textarea tenga un msje
-	if(comments.length === 0 || comments === null) {
-		return false;
-	}
+    //limpiar el textarea
+    document.getElementById('comment').value = '';
 
-	//nodos de texto del textarea
-	var textNewComment = document.createTextNode(comments);
-	var contenedorElemento = document.createElement('p');
-	contenedorElemento.appendChild(textNewComment);
-	newComments.appendChild(contenedorElemento);
-	cont.appendChild(newComments);
+    //contenedor que esta en el html
+    var cont = document.getElementById('cont');
+
+    //crear div con el comentario
+    var newComments = document.createElement('div');
+    newComments.className = "new";
+
+    //validar que textarea tenga un mensaje
+    if (comments.length === 0 || comments === null) {
+        return false;
+    }
+
+    //nodos de texto del textarea
+    var textNewComment = document.createTextNode("@UserName" + " " + "posted on" + " " + n + " " + "\n" + comments);
+    var contenedorElemento = document.createElement('div');
+    contenedorElemento.appendChild(textNewComment);
+    newComments.appendChild(contenedorElemento);
+    cont.appendChild(newComments);
+
 }
 
+var textarea = null; //textarea crece al saltar linea o seguir escribiendo
+window.addEventListener("load", function() {
+    textarea = window.document.querySelector("textarea");
+    textarea.addEventListener("keypress", function() {
+        if (textarea.scrollTop != 0) {
+            textarea.style.height = textarea.scrollHeight + "px";
+        }
+    }, false);
+}, false);
 
-function textAreaGrow(element) { //crece el textarea
-    element.style.height = "1px";
-    element.style.height = (element.scrollHeight)+"px";
-}
+document.getElementById("comment").addEventListener("keyup", charCounter);
 
-function charCounter (element) { //contador de caracteres
+function charCounter(element) { //contador de carácteres
+    var element = document.getElementsByClassName("txt")[0];
     var characters = element.value.length;
     var remain = 140 - characters;
-    if(characters >= 120 && characters <= 129){//Si pasa los 120 caracteres, mostrar el contador con OTRO color.
-    	counter.style.color = "#D02BFF";
+    if (characters >= 120 && characters <= 129) { //Si pasa los 120 caracteres, mostrar el contador con OTRO color.
+        counter.style.color = "#D02BFF";
+    } else if (characters >= 130 && characters <= 139) {
+        counter.style.color = "#FFD21F"; //Si pasa los 130 caracteres, mostrar el contador con OTRO color.
+    } else if (characters >= 140) {
+        counter.style.color = "red"; //si pasa el máximo, en rojo
+    } else {
+        counter.style.color = "#1DA1F2"; //de no cumplir nada de lo anterior, celeste (el color default)
     }
-    else if(characters >=130 && characters <= 139){
-    	counter.style.color = "#FFD21F"; //Si pasa los 130 caracteres, mostrar el contador con OTRO color.
-    }
-    else if(characters >=140){
-    	counter.style.color= "red";
-    }
-    else if (characters === ""){
-    	counter = 140; //se resetea
-    }
-    else{ 
-    	counter.style.color="#1DA1F2";
-    }
-  document.getElementById("counter").innerHTML = remain;
+    document.getElementById("counter").innerHTML = remain; //el contenido del contador es 140 menos el numero de letras
 
 }
 
-function disableBtn (){
+document.getElementById("btn").addEventListener("click", resetCharCount);
 
-	if (document.getElementById('comment').value.length >= 141){
-		document.getElementById("btn").disabled = true;
-	}
-	else if (document.getElementById('comment').value.length <= 140){
-		document.getElementById("btn").disabled = false;
-	}
+function resetCharCount() {
+    counter.textContent = "140"; //se resetea el contador de caracteres al apretar el botón
 
 }
 
-function hour() {
-    var d = new Date();
-    var n = d.toLocaleTimeString();
-    document.getElementById("comments").innerHTML = n;
+document.getElementById("comment").addEventListener("input", disableBtn);
+
+function disableBtn() { //desactivar boton si el numero de caracteres supera los 140
+
+    if (document.getElementById('comment').value.length >= 140) {
+        document.getElementById("btn").disabled = true;
+    } else if (document.getElementById('comment').value.length <= 140) {
+        document.getElementById("btn").disabled = false;
+    }
 }
