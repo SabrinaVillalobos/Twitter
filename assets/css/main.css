@@ -110,7 +110,9 @@ textarea {
     margin-bottom: 20px;
     background-color: #FFF;
     padding-bottom: 2px;
-    margin: 11px;
+    margin: 2px;
+    margin-left:15px;
+    margin-top: 5px;
     border-radius: 3px;
     width: 93%;
     color:#2C2E43;

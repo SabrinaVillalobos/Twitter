@@ -4,22 +4,22 @@ function textArea() {
 
     var d = new Date(); //agregar hora antes del comentario
     var n = d.toLocaleTimeString([], {
-        hour: '2-digit',
-        minute: '2-digit'
+        hour: "2-digit",
+        minute: "2-digit"
     }); //quitar los segundos del string hora hh:mm:ss
     document.getElementById("comment").innerHTML = n;
 
     //guardar texto ingresado en una variable
-    var comments = document.getElementById('comment').value;
+    var comments = document.getElementById("comment").value;
 
     //limpiar el textarea
-    document.getElementById('comment').value = '';
+    document.getElementById("comment").value = '';
 
     //contenedor que esta en el html
-    var cont = document.getElementById('cont');
+    var cont = document.getElementById("cont");
 
     //crear div con el comentario
-    var newComments = document.createElement('div');
+    var newComments = document.createElement("div");
     newComments.className = "new";
 
     //validar que textarea tenga un mensaje
@@ -28,8 +28,14 @@ function textArea() {
     }
 
     //nodos de texto del textarea
-    var textNewComment = document.createTextNode("@SuperCuate" + " " + "posted on" + " " + n + ":  " + comments);
-    var contenedorElemento = document.createElement('div');
+    var postedOn = document.createTextNode("@SuperCuate" + " " + "posted on" + " " + n + ":  ");//hora en que se postea
+    var contenedorElemento = document.createElement("div");
+    contenedorElemento.appendChild(postedOn);
+    newComments.appendChild(contenedorElemento);
+    cont.appendChild(newComments);
+
+    var textNewComment = document.createTextNode(comments); //comentario
+    var contenedorElemento = document.createElement("div");
     contenedorElemento.appendChild(textNewComment);
     newComments.appendChild(contenedorElemento);
     cont.appendChild(newComments);
