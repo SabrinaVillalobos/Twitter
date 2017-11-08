@@ -65,7 +65,7 @@ function charCounter(element) { //contador de carácteres
     } else if (characters >= 140) {
         counter.style.color = "red"; //si pasa el máximo, en rojo
     } else {
-        counter.style.color = "#0F1232"; //de no cumplir nada de lo anterior, celeste (el color default)
+        counter.style.color = "#0F1232"; //de no cumplir nada de lo anterior, azul (el color default)
     }
     document.getElementById("counter").innerHTML = remain; //el contenido del contador es 140 menos el numero de letras
 
