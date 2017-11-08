@@ -13,7 +13,7 @@ function textArea() {
     var comments = document.getElementById("comment").value;
 
     //limpiar el textarea
-    document.getElementById("comment").value = '';
+    document.getElementById("comment").value = "";
 
     //contenedor que esta en el html
     var cont = document.getElementById("cont");
