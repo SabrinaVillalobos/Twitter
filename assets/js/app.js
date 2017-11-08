@@ -3,7 +3,10 @@ document.getElementById("btn").addEventListener("click", textArea);
 function textArea() {
 
     var d = new Date(); //agregar hora antes del comentario
-    var n = d.toLocaleTimeString();
+    var n = d.toLocaleTimeString([], {
+        hour: '2-digit',
+        minute: '2-digit'
+    }); //quitar los segundos del string hora hh:mm:ss
     document.getElementById("comment").innerHTML = n;
 
     //guardar texto ingresado en una variable
@@ -25,7 +28,7 @@ function textArea() {
     }
 
     //nodos de texto del textarea
-    var textNewComment = document.createTextNode("@UserName" + " " + "posted on" + " " + n + " " + "\n" + comments);
+    var textNewComment = document.createTextNode("@SuperCuate" + " " + "posted on" + " " + n + ":  " + comments);
     var contenedorElemento = document.createElement('div');
     contenedorElemento.appendChild(textNewComment);
     newComments.appendChild(contenedorElemento);
@@ -50,13 +53,13 @@ function charCounter(element) { //contador de carácteres
     var characters = element.value.length;
     var remain = 140 - characters;
     if (characters >= 120 && characters <= 129) { //Si pasa los 120 caracteres, mostrar el contador con OTRO color.
-        counter.style.color = "#D02BFF";
+        counter.style.color = "#743D7B";
     } else if (characters >= 130 && characters <= 139) {
-        counter.style.color = "#FFD21F"; //Si pasa los 130 caracteres, mostrar el contador con OTRO color.
+        counter.style.color = "#ED7513"; //Si pasa los 130 caracteres, mostrar el contador con OTRO color.
     } else if (characters >= 140) {
         counter.style.color = "red"; //si pasa el máximo, en rojo
     } else {
-        counter.style.color = "#1DA1F2"; //de no cumplir nada de lo anterior, celeste (el color default)
+        counter.style.color = "#0F1232"; //de no cumplir nada de lo anterior, celeste (el color default)
     }
     document.getElementById("counter").innerHTML = remain; //el contenido del contador es 140 menos el numero de letras
 
@@ -65,7 +68,9 @@ function charCounter(element) { //contador de carácteres
 document.getElementById("btn").addEventListener("click", resetCharCount);
 
 function resetCharCount() {
-    counter.textContent = "140"; //se resetea el contador de caracteres al apretar el botón
+    counter.textContent = "140"; //se resetea el numero del contador de caracteres al apretar el botón
+    counter.style.color = "#0F1232" //se resetea el color del contador de caracteres al apretar el botón
+    textarea.style.height = "auto" //resetea la altura del textarea
 
 }
 

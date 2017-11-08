@@ -10,7 +10,7 @@ body {
 header {
     width: 100%;
     height: 46px;
-    background-color: #1DA1F2;
+    background-color: #0F1232;
     color: #fff;
 }
 h1 {
@@ -25,27 +25,31 @@ h2 {
     margin-top: 13px;
     padding-left: 30px;
     font-weight: 400;
+    color:#0F1232;
 }
 h3 {
     margin-top: 13px;
     padding-left: 30px;
     font-weight: 300;
     padding-bottom: 94px;
+    color:#0F1232;
 }
 div.boxleft { /*no darle altura para que crezca con el text area*/
     
-    margin-left: 5%;
+    margin-left: 6%;
     width: 43%;
     height: 320px;
-    background-color: #fff;
-    margin-top: 10px;
+    background-color: rgba(243, 238, 193, 0.79);
+    margin-top: 35px;
     float: left;
+    height: 319px;
+    border-radius: 5px;
 }
 a {
     text-decoration: none;
     font-weight: 500;
     font-size: 14px;
-    color: #1DA1F2;
+    color:#0F1232;
     display: block;
     padding-left: 30px;
     padding-top: 4%;
@@ -60,16 +64,17 @@ hr {
     height: 5px;
 }
 form {
-    margin-top: 10px;
-    margin-left: 49%;
+    margin-top: 35px;
+    margin-left: 51%;
     width: 43%;
-    background-color: #fff;
+    background-color: rgba(243, 238, 193, 0.79);
     overflow: hidden;
+    border-radius: 5px;
 }
 textarea {
     border-radius: 1em;
     border: none;
-    width: 70%;
+    width: 88.5%;
     margin: 0 auto;
     padding-top: 20px;
     padding-left: 20px;
@@ -77,9 +82,12 @@ textarea {
     outline: none;
     resize: none;
     overflow-y: hidden;
+    font-size: 16px;
+    background-color:rgba(243, 238, 193, 0);
+    color:#0F1232;
 }
 #btn {
-    background-color: #1DA1F2;
+    background-color: #0F1232;
     color: #fff;
     border: 0;
     border-radius: 2px;
@@ -90,24 +98,26 @@ textarea {
 }
 .buthr {
     margin: 20px;
-    margin-bottom: 10px;
+    margin-bottom: 7px;
     background-color: #eee;
     border: 0 none;
     color: #eee;
     height: 5px;
-    margin-top: 180px;
+    margin-top: 184px;
 }
 #cont div {
     display: inline-block;
     margin-bottom: 20px;
     background-color: #FFF;
     padding-bottom: 2px;
-    margin: 15px;
+    margin: 11px;
     border-radius: 3px;
-    width: 90%;
+    width: 93%;
+    color:#2C2E43;
+    font-weight: 500;
 }
 #cont {
-    padding-top: 80px;
+    padding-top: 30px;
     border-radius: 3px;
     width: 80%;
     margin: 0 auto;
@@ -126,6 +136,6 @@ span#counter {
     float: right;
     text-align: right;
     padding: 30px;
-    color: #1DA1F2;
+    color: #0F1232;
     font-weight: 600;
 }
